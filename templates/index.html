@@ -6,7 +6,12 @@
     <title>Churn Prediction</title>
 </head>
 <body>
-    <form action="/predict" method="POST">
+    <script>
+        document.getElementById("myform").addEventListener("submit", function(event){
+          event.preventDefault()
+        });
+    </script>
+    <form id="myform" action="/predict" method="POST">
         CustomerID: <input type="text" name = 'CustomerID'> 
         <br>
         <br>
